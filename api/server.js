@@ -3,8 +3,11 @@
 const express = require("express")
 const app = express()
 
+const cors = require("cors")
+app.use(cors())
+
 app.get("/", function(req, res) {
-  res.send("Jason Derulo!")
+  res.send({"name": "Jason Derulo"}) // Should be json format
 })
 
 app.listen(3000, () => {
